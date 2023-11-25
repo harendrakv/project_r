@@ -1,0 +1,14 @@
+opencv-python
+pandas
+numpy
+scikit-image
+pytesseract
+pdf2image
+openpyxl
+pillow
+flask
+nltk
+spacy
+yake
+rake_nltk
+textacy
