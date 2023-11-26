@@ -5,7 +5,7 @@ Created on Thu Nov 23 22:43:58 2023
 @author: harendra.verma
 """
 
-from utils import word_count_frequency, generate_uuid, DocumentCleaner
+from utils import DocumentCleaner
 from .feature_extractors import KeyphraseExtractor, FieldsExtractor
 
 
@@ -25,18 +25,13 @@ class ResumeTextParser:
         self.phones = FieldsExtractor(self.raw_text).extract_phone_numbers()
         self.location = FieldsExtractor(self.cleantext).extract_location()
         self.language_known = FieldsExtractor(self.cleantext).extract_language_known()
-        self.pos_frequencies = word_count_frequency(self.cleantext)
         self.keyphrases = KeyphraseExtractor(
             self.cleantext).get_keyphrase_using_spacy()
-        self.bigrams = KeyphraseExtractor(self.cleantext).get_bigrams()
-        self.trigrams = KeyphraseExtractor(self.cleantext).get_trigrams()
-
     def get_json_file(self):
         """
         Returns a dictionary of resume data.
         """
         outfile = {
-            "uid": generate_uuid(),
             "raw_text": self.raw_text,
             "cleantext": self.cleantext,
             # "links": self.links,
@@ -51,9 +46,6 @@ class ResumeTextParser:
             "industry_domain": self.industry_and_domain,
             "language_known": self.language_known,
             "location": self.location,
-            "bigrams": str(self.bigrams),
-            "trigrams": str(self.trigrams),
-            "pos_frequencies": self.pos_frequencies
         }
 
         return outfile
@@ -71,16 +63,11 @@ class JDTextParser:
         self.industry_and_domain = FieldsExtractor(self.cleantext).extract_industry_and_domain()
         self.location = FieldsExtractor(self.cleantext).extract_location()
         self.language_known = FieldsExtractor(self.cleantext).extract_language_known()
-        self.pos_frequencies = word_count_frequency(
-            self.cleantext)
         self.keyphrases = KeyphraseExtractor(
             self.cleantext).get_keyphrase_using_spacy()
-        self.bigrams = KeyphraseExtractor(self.cleantext).get_bigrams()
-        self.trigrams = KeyphraseExtractor(self.cleantext).get_trigrams()
 
     def get_json_file(self):
         outtile = {
-            "uid": generate_uuid(),
             "raw_text": self.raw_text,
             "cleantext": self.cleantext,
             "job_title": self.job_title,
@@ -90,9 +77,6 @@ class JDTextParser:
             "language_known": self.language_known,
             "location": self.location,
             "keyphrases": self.keyphrases,
-            "bigrams": str(self.bigrams),
-            "trigrams": str(self.trigrams),
-            "pos_frequencies": self.pos_frequencies
-        }
+            }
 
         return outtile

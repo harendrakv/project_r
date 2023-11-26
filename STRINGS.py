@@ -1,7 +1,6 @@
 JD = "job_description"
 RESUME = "resume"
-RESUME_FILES_PATH = 'data/resumes'
-JD_FILES_PATH = 'data/jd'
+
 skill_pattern_path = "data/jz_skill_patterns.jsonl"
 extra_skill_pattern_path = "data/other_skills.jsonl"
 
@@ -17,6 +16,15 @@ RE_PATTERNS = {
     'education_pattern': r"(?i)(?:Bsc|\bB\.\w+|\bM\.\w+|\bPh\.D\.\w+|\bBachelor(?:'s)?|\bMaster(?:'s)?|\bPh\.D)\s(?:\w+\s)*\w+"
 }
 
+jd_fields = [
+            "job_title",
+            "technical_skills",
+            "education",
+            "industry_domain",
+            "language_known",
+            "location",
+            ]
+
 education_keywords = [
             'Bachelor', 'BE','B.E.', 'B.E', 'BS', 'B.S','C.A.','c.a.','B.Com','B. Com','Bsc', 'B. Pharmacy', 'B Pharmacy', 
             'M. Com', 'M.Com','M. Com .','Msc', 'M. Pharmacy','M. Pharma','M Pharma',
@@ -25,34 +33,3 @@ education_keywords = [
             'PHD', 'phd', 'ph.d', 'Ph.D.','MBA','mba','graduate', 'post-graduate','5 year integrated masters','masters',
             'SSC', 'HSC', 'CBSE', 'ICSE', 'X', 'XII'
         ]
-MAJOR_RESUME_SECTIONS = [
-    'Contact Information',
-    'Objective',
-    'Summary',
-    'Education',
-    'Experience',
-    'Skills',
-    'Projects',
-    'Certifications',
-    'Licenses',
-    'Awards',
-    'Honors',
-    'Publications',
-    'References',
-    'Technical Skills',
-    'Computer Skills',
-    'Programming Languages',
-    'Software Skills',
-    'Soft Skills',
-    'Language Skills',
-    'Professional Skills',
-    'Transferable Skills',
-    'Work Experience',
-    'Professional Experience',
-    'Employment History',
-    'Internship Experience',
-    'Volunteer Experience',
-    'Leadership Experience',
-    'Research Experience',
-    'Teaching Experience'
-]

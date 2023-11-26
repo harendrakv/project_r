@@ -64,17 +64,21 @@ class FieldsExtractor:
 
     def extract_location(self):
         location = [ent.text for ent in self.doc.ents if ent.label_ == 'GPE']
-        return location
+        return list(set(location))
     
     def extract_job_title(self):
-        skills = [ent.text for ent in self.ner_doc.ents if ent.label_ == 'JOBTITLE']
-        return list(set(skills))
+        jobtitles = [ent.text for ent in self.ner_doc.ents if ent.label_ == 'JOBTITLE']
+        if len(jobtitles)==0:
+            domain_ents = [ent for ent in all_ents if ent not in ['SKILL']]
+            jobtitles = [ent.label_ for ent in self.ner_doc.ents if ent.label_ in domain_ents]
+
+        return list(set(jobtitles))
 
     def extract_education(self):
         education = []
         for keyword in STRINGS.education_keywords:
             pattern = r"(?i)\b{}\b".format(re.escape(keyword))
-            match = re.search(pattern, self.clean_text)
+            match = re.search(pattern, self.text)
             if match:
                 education.append(match.group())
         return education
@@ -125,12 +129,3 @@ class KeyphraseExtractor:
                                            topn=self.top_counts))]
         return keywords
     
-
-    def get_bigrams(self):
-        bigrams = textacy.extract.basics.ngrams(self.doc, n=2, filter_stops=True,
-                                                  filter_nums=True, filter_punct=True)
-        return list(bigrams)
-    def get_trigrams(self):
-        trigrams = textacy.extract.basics.ngrams(self.doc, n=3, filter_stops=True,
-                                                  filter_nums=True, filter_punct=True)
-        return list(trigrams)

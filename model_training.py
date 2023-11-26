@@ -115,7 +115,5 @@ convert("en", train_data, "data/valid.spacy")
 # python -m spacy init fill-config data/base_config.cfg data/config.cfg
 # train
 # python -m spacy train data/config.cfg --paths.train data/train.spacy --paths.dev data/valid.spacy --output ./models/output_trf
-
 # In[]
 # python -m spacy train data/config_trf.cfg --output ./models/output_trf
-        

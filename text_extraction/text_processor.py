@@ -15,15 +15,42 @@ import os
 import STRINGS
 
 # In[]
+def process_resumes(input_path=None):
+    if input_path==None:
+        resume_files = os.listdir(FilesUtility().resumes_path)
+        for i, file in enumerate(resume_files):
+            print("Processing resume {} of {}".format(i+1, len(resume_files)))
+            doc_pr = DocumentProcessor(file, STRINGS.RESUME).process_text()
+    else:
+        resume_files = os.listdir(input_path)
+        for i, file in enumerate(resume_files):
+            print("Processing resume {} of {}".format(i+1, len(resume_files)))
+            doc_pr = DocumentProcessor(file, STRINGS.RESUME, input_path).process_text()
+            
+def process_job_descriptions(input_path=None):
+    if input_path==None:
+        jd_files = os.listdir(FilesUtility().jd_path)
+        for i, file in enumerate(jd_files):
+            print("Processing job description {} of {}".format(i+1, len(jd_files)))
+            doc_pr = DocumentProcessor(file, STRINGS.JD).process_text()
+    else:
+        jd_files = os.listdir(input_path)
+        for i, file in enumerate(jd_files):
+            print("Processing job description {} of {}".format(i+1, len(jd_files)))
+            doc_pr = DocumentProcessor(file, STRINGS.JD, input_path).process_text()
+            
 class DocumentProcessor:
-    def __init__(self, filename, identifier=None):
+    def __init__(self, filename, identifier=None, input_path=None):
         self.filename = filename
         self.identifier = identifier
-        if self.identifier==STRINGS.RESUME:
-            self.filepath = os.path.join(os.getcwd(), FilesUtility().resumes_path, self.filename)
+        if input_path:
+            self.filepath = os.path.join(input_path, self.filename)
         else:
-            self.filepath = os.path.join(os.getcwd(), FilesUtility().jd_path, self.filename)
-    
+            if self.identifier==STRINGS.RESUME:
+                self.filepath = os.path.join(os.getcwd(), FilesUtility().resumes_path, self.filename)
+            else:
+                self.filepath = os.path.join(os.getcwd(), FilesUtility().jd_path, self.filename)
+
     def process_text(self):
         try:
             if self.identifier==STRINGS.RESUME:
@@ -36,30 +63,41 @@ class DocumentProcessor:
         except Exception as error:
             print(f"Error: {str(error)}")
             return  False
-        
+
     def read_resume_file(self):
         data = self.read_text_from_file()
         self.raw_text = data
         out_dict = ResumeTextParser(data).get_json_file()
+        out_dict['resume_file'] = self.filename.split('.')[0].strip().replace(" ","_")
         return out_dict
 
     def read_jd_file(self):
         data = self.read_text_from_file()
         self.raw_text = data
         out_dict = JDTextParser(data).get_json_file()
+        out_dict['jd_file'] = self.filename.split('.')[0].strip().replace(" ","_")
         return out_dict
 
     def write_json_file(self, dictionary):
-        file_name = str(self.identifier + pathlib.Path(self.filepath).stem +
-                        dictionary["uid"] + ".json")
+        file_name = str(self.identifier + "_" + pathlib.Path(self.filepath).stem + ".json")
+        
         
         if self.identifier==STRINGS.RESUME:
-            save_directory_name = os.path.join(os.getcwd(), FilesUtility.resumes_save_path, file_name)
+            save_file_name = os.path.join(pathlib.Path(self.filepath).parent.parent, FilesUtility.resumes_save_path, file_name)
+            FilesUtility.resume_save_path = save_file_name
         else:
-            save_directory_name = os.path.join(os.getcwd(), FilesUtility.jd_save_path, file_name)
+            save_file_name = os.path.join(pathlib.Path(self.filepath).parent.parent, FilesUtility.jd_save_path, file_name)
+            FilesUtility.jd_save_path = save_file_name
+        
+        if not os.path.isdir(pathlib.Path(save_file_name).parent):
+            if not os.path.isdir(pathlib.Path(save_file_name).parent.parent):
+                os.mkdir(pathlib.Path(save_file_name).parent.parent)
+                os.mkdir(pathlib.Path(save_file_name).parent)
+            else:
+                os.mkdir(pathlib.Path(save_file_name).parent)
 
         json_object = json.dumps(dictionary, sort_keys=True)
-        with open(save_directory_name, "w+") as outfile:
+        with open(save_file_name, "w+") as outfile:
             outfile.write(json_object)
                     
     def convertDocxToText(self):

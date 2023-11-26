@@ -9,4 +9,4 @@ from .doc_parser import ResumeTextParser,JDTextParser
 
 from .feature_extractors import FieldsExtractor, KeyphraseExtractor
 
-from .text_processor import DocumentProcessor
+from .text_processor import DocumentProcessor, process_resumes, process_job_descriptions

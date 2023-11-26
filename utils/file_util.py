@@ -14,8 +14,8 @@ class FilesUtility():
     excel_ext: str = '.xlsx'
     jd_path: str = "data/jd"
     resumes_path: str = "data/resumes"
-    jd_save_path: str = "data/processed/jd"
-    resumes_save_path: str = "data/processed/resumes"
+    jd_save_path: str = "processed/jd"
+    resumes_save_path: str = "processed/resumes"
 
 
     def __init__(self) -> None:

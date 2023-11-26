@@ -8,52 +8,9 @@ Created on Thu Nov 23 23:04:35 2023
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import LancasterStemmer, WordNetLemmatizer
-from sklearn.feature_extraction.text import TfidfVectorizer
 import re, unicodedata
 import inflect
-import spacy
-from uuid import uuid4
-import textdistance as td
 import STRINGS
-
-nlp = spacy.load(STRINGS.NLP_MODEL)
-
-
-def generate_uuid():
-    """
-    This function generate a unique id
-    """
-    return str(uuid4())
-
-
-def word_count_frequency(text):
-    """
-    This function counts the frequecy of words in given text
-    """
-    doc = nlp(text)
-
-    pos_freq = {}
-    for token in doc:
-        if token.pos_ in pos_freq:
-            pos_freq[token.pos_] += 1
-        else:
-            pos_freq[token.pos_] = 1
-    return pos_freq
-
-def perform_tfidf(token):
-    tfidf = TfidfVectorizer(max_df=0.05, min_df=0.002)
-    words = tfidf.fit_transform(token)
-    sentence = " ".join(tfidf.get_feature_names())
-    return sentence
-
-
-def get_similarity_score(resume, job_des):
-    j = td.jaccard.similarity(resume, job_des)
-    s = td.sorensen_dice.similarity(resume, job_des)
-    c = td.cosine.similarity(resume, job_des)
-    o = td.overlap.normalized_similarity(resume, job_des)
-    total = (j+s+c+o)/4
-    return total*100
 
 def check_regex_match(match):
     if match is not None:

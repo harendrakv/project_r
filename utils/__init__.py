@@ -10,4 +10,4 @@ from .file_util import FilesUtility, create_directory, check_if_file, create_dir
 from .file_util import delete_files_in_directory, delete_directory, get_user_input, load_jsonl
 
 from .pdf_util import extract_pdf_data, process_image
-from .Utils import generate_uuid, word_count_frequency, DocumentCleaner, perform_tfidf, get_similarity_score
+from .Utils import DocumentCleaner
