@@ -17,8 +17,8 @@ class TextSimilarityScore:
             resumes_path = os.path.join(base_path, FilesUtility.resumes_save_path)
             jds_path = os.path.join(base_path, FilesUtility.jd_save_path)
         else:
-            resumes_path = FilesUtility.resumes_save_path
-            jds_path = FilesUtility.jd_save_path
+            resumes_path = os.path.join(FilesUtility.user_file_path, FilesUtility.resumes_save_path)
+            jds_path = os.path.join(FilesUtility.user_file_path, FilesUtility.jd_save_path)
 
         resumes = []
         for file in os.listdir(resumes_path):
@@ -57,7 +57,7 @@ class TextSimilarityScore:
         return total_similarity
     
     def get_resumes_similarity_given_jd(self, jd_path):       
-        jd = json.load(open(os.path.join(FilesUtility.jd_save_path, jd_path)))
+        jd = json.load(open(os.path.join(FilesUtility.user_file_path,FilesUtility.jd_save_path, jd_path)))
         resume_scores = []
         resume_files = []
         for i in range(len(self.resumes)):
@@ -67,7 +67,7 @@ class TextSimilarityScore:
         return pd.DataFrame({"resumes": resume_files, "score": resume_scores})
     
     def get_jd_similarity_given_resume(self, resume_path):       
-        resume = json.load(open(os.path.join(FilesUtility.resume_save_path, resume_path)))
+        resume = json.load(open(os.path.join(FilesUtility.user_file_path, FilesUtility.resume_save_path, resume_path)))
         jd_scores = []
         jd_files = []
         for i in range(len(self.jds)):
@@ -90,7 +90,7 @@ class TextSimilarityScore:
         # other tags are job_title, location, education and industry_domain
         if tags==None:
             tags=STRINGS.jd_fields
-        jd = json.load(open(os.path.join(FilesUtility.jd_save_path, jd_path)))
+        jd = json.load(open(os.path.join(FilesUtility.user_file_path, FilesUtility.jd_save_path, jd_path)))
         
         dflist = []
         for j, tag in enumerate(tags):

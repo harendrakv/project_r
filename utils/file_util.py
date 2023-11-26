@@ -4,7 +4,7 @@ from pathlib import Path
 import json
 
 class FilesUtility():
-    user_file_path: str = ""
+    user_file_path: str = "data"
     user_file_name: str = ""
     user_file_ext: str = ""
     image_dir: str = ""

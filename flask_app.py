@@ -18,7 +18,7 @@ def handle_rf_post():
             'jd_file_path' in data):
             process_resumes(data['resume_file_path'])
             process_job_descriptions(data['jd_file_path'])
-            processed_jdsfiles = os.listdir(FilesUtility.jd_save_path)
+            processed_jdsfiles = os.listdir(os.path.join(FilesUtility.user_file_path, FilesUtility.jd_save_path))
             base_path = Path(data['jd_file_path']).parent
             for i in range(len(processed_jdsfiles)):
                 print("Creating match for job description {} of {}".format(i+1, len(processed_jdsfiles)))
