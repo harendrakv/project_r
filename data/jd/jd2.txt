@@ -1,0 +1,60 @@
+Company
+Avatar for Asper.ai
+Asper.ai
+Location
+Bengaluru • Bangalore Urban
+Job type
+Full Time
+Visa sponsorship
+Not Available
+Remote work policy
+In office
+Relocation
+Allowed
+Experience
+6+ years
+Skills
+Python
+Demand Planning/Forecasting
+Demand Planning
+NLP
+Generative AI
+
+Senior Data Scientist
+₹40L – ₹50L
+About the job
+About the Company:
+Asper.ai, a Fractal company, enables interconnected and automated decisions at the intersection of demand and supply. By changing how decisions are made, Asper.ai unlocks growth and transforms organizations into adaptive, intelligent enterprises.
+
+Through its 'autonomic decisioning' platform, Asper.ai works with data to provide proactive, interconnected, and automated decisions that help customers reach their true potential – from optimizing workflows to growing the bottom line.
+
+You can read more here: https://www.asper.ai/
+https://www.linkedin.com/company/asperai/
+
+Role Name: Sr/Lead Data Scientist
+Location: Bangalore | Hybrid
+Reporting to: Director Data Science
+Senior Individual contributor role.
+
+Mandates we are looking for:
+
+Proficiency in Python (including packages like NumPy, pandas, Sklearn, Py torch, TensorFlow, matplotlib), SQL and Excel.
+6 + years experience in NLP, Generative AI, data-structures and ML (Machine Learning) algorithms.
+Experience in demand planning and demand forecasting
+Expertise in exploratory data analysis, visualizations, ETL, hypothesis testing, experimentation, automation, etc.
+Why is this role important for us?
+We are building an exceptional team of data scientists to solve problems of Demand Planning, Revenue Growth Management, and other areas of Demand-Supply Agility in CPG and Retail.
+
+We promise and deliver outcomes that are 5%-10% better than current benchmarks and do this in a transparent and scalable way. Simultaneously solving for multiple objectives of best-in-class Accuracy, Scalability, and Explainability requires best-in-class talent.
+
+Why work with us?
+
+Experience a fast paced, growing, and stable start-up with a culture of care at heart. You will be enabled to be your best every day – personally & professionally.
+Be a part of the AI revolution and bring to life solutions that make a difference to the world. You will get to work with the latest technology in the field.
+Coming to work will not feel monotonous – you get to work with some of the brightest and the nicest colleagues you will meet and build bonds for life. We work hard and have fun together as well.
+Build for impact at scale with products that will fundamentally transform how CPG operates today and define for tomorrow.
+*Our Ethos: *
+Technology cannot do extraordinary things; it is people that make it happen.
+Our culture fosters collaboration, continuous learning, innovation, and an agile approach. A truly inspiring environment that lets you thrive personally and professionally.
+
+It would be awesome, if you also have experience working in CPG, FMCG or retail industry

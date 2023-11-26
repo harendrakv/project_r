@@ -1,0 +1,30 @@
+Aerospace Engineering(Aerospace): aircraft noise,combustion,aircraft,turbine,control,avionics,wing,nacelle,aerospace,gas turbine engine,propulsion,aircraft propulsion,thrust,fuselage,airfoil,aeronautical,aerospace combustion,flight,airflow,flap,turbofan,turbojet,jet,aircraft structures,aerodynamics
+Finite Element Analysis(FEA): mesh,structure,load,stress,finite element,ansys,fea,fatigue,displacement,computer added,strutural analysis,solid mechanics,finite element analysis
+Computational Fluid Dynamics(CFD): mesh,turbulence,gas,air,fluid,pressure,flow,grid,heat transfer,cfd,fluid dynamics,fluid mechanics,aerodynamics,fluid flow,computational
+Automobile Engineering(Automobile): automobile,vehicle,automotive,motor,diesel,ignition,filter,spark ignition,car,auto,exhaust,manifold,air filter
+Power: poewer,energy,electricity,gas turbine,plant,power plant,nuclear,production,voltage,battery,power plant,wind,solar,renewable,green power,green energy
+Manufacturing(Manufacturing): Assembly,Capacity Planning,CNC,PLC,Machining,ISO 9000 Compliance,Materials,Preventative Maintenance,Product Testing,Production Methodologies,Production Scheduling,Profit and Loss Responsibility,Prototype Design,Procurement,Quality Assurance,maintenance,warehousing,production,raw material
+Mechanical engineer(Mechanical): Analysis,BSME,Building,CAD,Design,Development,Drawings,Equipment,HVAC,Mechanical,Performance,Product,SolidWorks,Systems,Team,Technical,Testing
+Design Engineer(Design): mechanical design,design engineering,autocad,design,mechanical engineering,design engineer,catia,mechanical engineer,product design,pro e,machine design,product development,ug,epc,unigraphics,drafting,ansys
+Stress Analysis(Stress): stress analysis,fatigue,abaqus,ansys,workbench,fea,structural analysis,creep,lifing,vibration,model analysis,elastic,viscoelastic,static analysis,dynamic analysis,bending,torsion,bearings,gear,composite material,laminated composite,damage tolerance,handling damage tolerance,fail safe
+Combustion: combustion,ignition,lean combustion,droplet combustion,rich combustion,flashback,blow out,premix,diffusion,autoignition,combustion diagnostics,reactive flow,Emission,prevaporised,fuel,burner,spark ignition,spark,hot flow,vaporization,swirler
+Finance: finance,company,investor,risk,price,loan,business,financial,fund,bank,credit,economic,capital,return,wealth,assets,policy,scheme,equity,investment,insurance,mutual fund
+Marketing: digital,social,marketing,advertise,consumers,affiliate,communication,cost,stock,purchase,sales,advertisement,strategies,market,business,digital market
+Human Resources(HR): Employee Relations,Onboarding,HRIS,Performance Management,Team Building,Scheduling,Project Management,recruitment,assessments,career development,exit interviews,employment law,benefits administration,compensation
+Accounting: Payroll,Accounts Payable,Accounts Receivable,Bookkeeping,ADP,Audits,Billing,Excel,Reconciliations,Sales Tax,Corporate Tax,budgets,reconciliations,tax payments,financial statements,inventory control
+Sales and marketing(Sales): Account development,brand management,campaign management,competitive analysis,competitive contract award,consultative sales,customer loyalty,customer needs assessment,customer retention,direct sales,distributor management,incentive planning,key account management,margin improvement,market launch,market positioning,market share ratings,new market development,product launch,P&L management,profit growth,promotions,revenue stream,sales forecasting,solutions selling
+Management: data analysis,goal setting,budget control,resource allocation,staff development,conflict resolution,performance management,change management,operating procedures,quality assurance+
+Medical: medical,patient,health,clinical,patients,treatment,drug,heart,cells,medication,biomedical,tissue,report,lung,artery,diabetes,blood,hospital,surgery,dental
+Statistics: statistical models,statistical modeling,probability,normal distribution,poission distribution,survival,hypothesis testing,bayesian inference,factor analysis,forecasting,markov chain,monte carlo
+Machine Learning(ML): machine learning,algorithm,timeseries, series,supervised,unsupervised,linear regression,logistic regression, classification,K means, random forest, xgboost, gradient boosting,svm,naïve bayes,pca,decision trees,svd,ensemble models,boltzman machine,sciket learn
+Deep Learning(DL): convolutional neural network,cnn, neural,network,deep learning,yolo,recurrent neural network,rnn,computer vision,tensorflow,lstm,gan,opencv,object detection,face detection, theano, keras, natural language, NLP
+NLP: nlp,natural language processing,topic modeling,ida,named entity recognition,pos tagging,word2vec,word embedding,lsi,spacy,genism,nltk,nmf,doc2vec,cbow,bag of words, skip gram,bert,sentiment analysis,chat bot
+Data Engineering(DE): data science,data mining,database,big data,aws,ec2,s3,docker,scala,teradata,google big query,aws lambda,aws emr,hive,hadoop,sql,kubernetes,amazon redshift
+R Language(R): r,rstudio,ggplot,shiny,cran,dplyr,tidyr,lubridate,knitr
+Python Language(Python): python,pandas,numpy,scikitlearn,sklearn,matplotlib,scipy,bokeh,statsmodel,tkinter,Jupyter Notebook,
+C/C++ Language(C/C++): c,c++,data structure
+Java Language(Java): java, java language, java programing, spring, hybernate,struct,core java, advanced java
+Web Developement(WebD): jsp,servelet,web developement,.net,php,html,django,flask
+Networking: network engineer,ip,internet protocol,routing protocol,dhcp,vlan,lan,voip,switching
+Software Testing(S_Test): software testing,agile,scrum,selenium,automation,Software development lifecycle,Functional Testing,System Testing,User Acceptance testing,JIRA,Manual Testing,Bugzilla,Bug Tracker,QC(ALM)
+Electronics Engineering(Electronics): embedded systems,matlab,orcad,eagle,signal processing,vlsi,chip,chip design,electronics hardware

@@ -1,0 +1,66 @@
+Lead Data Scientist
+$30k – $100k • 0.01% – 0.02%
+About the job
+*Position Summary *
+
+We are seeking a talented data science lead to join our team in developing GenAI, an innovative virtual agent platform. This is a groundbreaking opportunity to build and shape leading-edge AI technology from inception.
+
+You will play an instrumental role as we construct GenAI's architecture and capabilities to enable businesses worldwide to easily implement virtual agents. We envision empowering companies of all sizes to transform customer engagement through conversational interfaces.
+
+In this early-stage position, you can profoundly impact the platform's design and implementation. We are looking for someone passionate about leveraging data science and AI to create intelligent systems. You will collaborate with our engineers and product leaders to bring our platform vision to life.
+
+Join our ambitious team to help realize our goal of delivering world-class artificial intelligence to millions of users globally. You will gain invaluable experience building a platform from scratch as we scale to meet demand. This role offers enormous potential for personal and career growth.
+
+As part of the startup, you will also have the additional opportunity of working directly with the customers and the executive team.
+
+*Minimum Qualification *
+
+We are seeking a talented data scientist or AI/machine learning Ph.D. to join our team building the next generation of virtual agents. The ideal candidate will have:
+
+3+ years experience developing and deploying enterprise AI products and solutions, with a focus on conversational interfaces.
+Expertise in AI/ML methods like natural language processing, neural networks, reinforcement learning, etc.
+Hands-on experience with programming languages like Python and C++ to implement models.
+Knowledge of the full machine learning development lifecycle: data preprocessing, model training, evaluation, and deployment.
+A strong track record of shipping machine learning products from research to production.
+Excellent communication skills to collaborate across teams.
+Passion for staying on top of AI/ML research and applying new techniques.
+Entrepreneurial spirit and excitement for joining an early-stage startup.
+Self-motivation to take ownership over delivering high-impact AI innovations.
+
+*Preferred Qualifications *
+
+We highly value candidates who:
+
+Have a meticulous eye for detail and can methodically execute complex technical projects end-to-end.
+Are quick learners who can rapidly pick up new technologies as needed to deliver AI/ML solutions.
+Keep up with the latest research and can apply cutting-edge techniques to real-world problems.
+Are self-directed and motivated to dive into ambiguous technical challenges.
+Can communicate complex topics clearly and concisely with both technical and non-technical colleagues.
+Enjoy continuously expanding their skillset and aren't afraid to learn entirely new technologies.
+Thrive in taking broad business needs and turning them into concrete AI/ML implementations.
+This role provides ample opportunities to expand your technical capabilities and have high impact on our AI platform development.
+
+Company
+Avatar for SproutsAI
+SproutsAI
+Location
+Remote • Europe • India • United States • London • Zurich • Berlin • Edinburgh • Dublin • San Francisco Bay Area • Asia • Athens • Latino América
+Job type
+Full Time
+Visa sponsorship
+Not Available
+Hires remotely
+Everywhere
+Preferred timezones
+Hawaii, Pacific Time, Mountain Time, Central Time, Eastern Time, Azores, Central European Time, Eastern European Time, Indochina Time, Auckland, Wellington
+Remote work policy
+Remote only
+Collaboration hours
+8:00 AM - 8:00 PM Pacific Time
+Relocation
+Allowed
+Experience
+5+ years
+Skills
+Python
+NLP

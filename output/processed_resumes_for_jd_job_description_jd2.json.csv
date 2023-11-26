@@ -1,0 +1,16 @@
+,resumes,score,job_title_matched,job_title_score,technical_skills_matched,technical_skills_score,industry_domain_matched,industry_domain_score,location_matched,location_score
+0,Amazon_Prerna_Gahndi_Legal_Counsel,0.8929340953531055,"['MachineLearning', 'Mechanicalengineer', 'Finance']",75.0,[],0.0,"['MachineLearning', 'Mechanicalengineer', 'Finance']",75.0,['bengaluru'],50.0
+1,Apex_Raghunandan_MJ_Senior_Acc_Mgr,0.827822274567366,[],0.0,[],0.0,"['Mechanicalengineer', 'Finance']",50.0,[],0.0
+2,CV,0.8937325600588086,"['MachineLearning', 'Mechanicalengineer', 'Finance']",75.0,"['python', 'automation', 'nlp']",21.428571428571427,"['MachineLearning', 'Mechanicalengineer', 'Finance']",75.0,['bangalore'],50.0
+3,ResumeA,0.7009003930836253,['DeepLearning'],25.0,"['python', 'data science']",14.285714285714285,['DeepLearning'],25.0,[],0.0
+4,ResumeAkashVerma,0.7995602162233933,"['MachineLearning', 'Mechanicalengineer']",50.0,"['python', 'algorithms']",14.285714285714285,"['MachineLearning', 'Mechanicalengineer']",50.0,[],0.0
+5,ResumeAkbarQuraishi_1y,0.6768081535993618,"['DeepLearning', 'MachineLearning', 'Mechanicalengineer']",75.0,"['python', 'numpy', 'testing']",21.428571428571427,"['DeepLearning', 'MachineLearning', 'Mechanicalengineer']",75.0,[],0.0
+6,ResumeASHILJACOBTJ,0.9259231326201403,"['DeepLearning', 'MachineLearning', 'Mechanicalengineer']",75.0,"['python', 'automation', 'collaboration', 'testing']",28.57142857142857,"['DeepLearning', 'MachineLearning', 'Mechanicalengineer']",75.0,[],0.0
+7,ResumeBhagwantiVerma,0.7217005586442787,"['MachineLearning', 'Mechanicalengineer']",50.0,"['python', 'algorithms', 'sql']",21.428571428571427,"['MachineLearning', 'Mechanicalengineer']",50.0,[],0.0
+8,ResumeDHEERAJSHARMA,0.7408954266888994,['MachineLearning'],25.0,"['python', 'data science', 'sql', 'numpy']",28.57142857142857,['MachineLearning'],25.0,['bangalore'],50.0
+9,Resumejkishnakishore_2,0.8021473371429513,"['DeepLearning', 'MachineLearning', 'Mechanicalengineer', 'Finance']",100.0,"['python', 'data science', 'algorithms', 'numpy', 'nlp', 'data scientist']",42.857142857142854,"['DeepLearning', 'MachineLearning', 'Mechanicalengineer', 'Finance']",100.0,['bangalore'],50.0
+10,ResumeRajChauhan,0.6176261959443825,"['MachineLearning', 'Mechanicalengineer']",50.0,"['python', 'data science', 'sql']",21.428571428571427,"['MachineLearning', 'Mechanicalengineer']",50.0,['bengaluru'],50.0
+11,ResumeSagarYadav,0.9003513179820237,"['MachineLearning', 'Mechanicalengineer']",50.0,"['python', 'data science', 'sql']",21.428571428571427,"['MachineLearning', 'Mechanicalengineer']",50.0,[],0.0
+12,ResumeSaraswathiMamidala_1y,0.717084716976142,['MachineLearning'],25.0,"['python', 'nlp']",14.285714285714285,['MachineLearning'],25.0,[],0.0
+13,ResumeSnehaCahuhan,0.5379373576679755,['Mechanicalengineer'],25.0,['python'],7.142857142857142,['Mechanicalengineer'],25.0,[],0.0
+14,ResumeVineethVs,0.5391352183679174,['Mechanicalengineer'],25.0,['python'],7.142857142857142,['Mechanicalengineer'],25.0,[],0.0

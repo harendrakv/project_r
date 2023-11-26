@@ -1,0 +1,82 @@
+Lead Data Scientist
+₹15L – ₹22L
+About the job
+Aidetic
+Scaling AI and Data Engineering Aidetic
+We build End to End AI Solutions for various industries such as Sports, Finance, Ecommerce, Media etc. Aidetic helps business build capabilities for predictive analytics, scalable data engineering and production level DLML models.
+
+Job Description
+We are looking for a highly motivated data scientist with a strong algorithmic mindset and problemsolving propensity. Since we are operating in a highly competitive market, every opportunity to increase efficiency and cut costs is critical and the candidate should have an eye for such opportunities. We are constantly innovating working on novel hardware and software so a high level of flexibility and celerity in learning is expected.
+Experience: 3-6 years of experience
+
+Responsibilities:
+
+Algorithm Development: Develop and implement advanced algorithms to extract actionable insights from complex data sets, contributing to data-driven decision-making.
+Machine Learning and Deep Learning: Apply expertise in Python, TensorFlow, PyTorch, and Scikit-learn to build and deploy machine learning and deep learning models, optimizing performance and accuracy.
+Natural Language Processing (NLP): Utilize NLP techniques, including but not limited to SpaCy, NLTK, and Transformers, to extract valuable information from unstructured text data, enabling sentiment analysis, topic modeling, and other NLP applications.
+Data Preprocessing and Feature Engineering: Lead data preprocessing activities, including data cleaning, feature selection, and engineering, to ensure data quality and model effectiveness.
+Model Evaluation and Optimization: Continuously assess model performance and implement strategies for model optimization and fine-tuning, ensuring our solutions remain state-of-the-art.
+Efficiency Enhancement: Identify and exploit opportunities to improve business processes and reduce costs by leveraging data-driven insights, such as process automation or resource allocation optimization.
+Cross-functional Collaboration: Collaborate with cross-functional teams, including engineers, product managers, and business analysts, to ensure the seamless integration of data science solutions into our products and operations.
+Mentorship and Leadership: Provide guidance and mentorship to junior data scientists, fostering their growth and knowledge in the field.
+Stay Updated: Stay abreast of the latest developments in data science, machine learning, and AI to ensure that our solutions remain at the cutting edge of technology.
+Requirements
+
+Strong proficiency in Python and a deep understanding of data science libraries and frameworks, including TensorFlow, PyTorch, Scikit-learn, Scipy, SpaCy, NLTK, and Transformers.
+Experience in developing and deploying deep learning models for various applications.
+Expertise in NLP techniques and the ability to extract meaningful insights from textual data.
+Exceptional problem-solving skills and a track record of translating data-driven insights into actionable recommendations.
+Strong leadership and mentoring skills to guide and support junior data scientists.
+Adaptability and a keen desire for continuous learning in a fast-paced, innovative environment.
+Excellent communication and collaboration skills to work effectively with cross-functional teams.
+Benefits:
+
+Startup Environment: Join our small team of 50 young professionals in a dynamic and impactful startup setting.
+Growth Opportunities: Expand your skills and advance your career rapidly in our closeknit team, where you can take on diverse responsibilities.
+Direct Impact: Your contributions shape the companys success and future growth, making your work meaningful and recognized.
+Fun and Social Activities: Engage in regular teambuilding activities and events, fostering strong relationships with colleagues.
+Transparency and Communication: Experience a culture of transparency, open communication, and opportunities to provide feedback.
+Entrepreneurial Spirit: Develop an entrepreneurial mindset and gain firsthand experience in building a company.
+Company Culture: Join a team that celebrates achievements, supports one another, and creates an environment for success.
+Vacation and Holidays: Enjoy a generous vacation policy and holiday allowances, prioritizing your worklife balance and wellbeing.
+Competitive Compensation: We offer a highly competitive salary to attract top talent in the industry. Your hard work and contributions will be rewarded accordingly.
+Company
+Avatar for PyjamaHR Technologies
+PyjamaHR Technologies
+Location
+India • Bengaluru • Karnataka • Bangalore Urban
+Job type
+Full Time
+Visa sponsorship
+Not Available
+Remote work policy
+In office
+Relocation
+Allowed
+Experience
+3+ years
+Skills
+Python
+Machine Learning
+Data Analysis
+Django
+Flask
+NLTK
+Numpy
+Scipy
+Pandas
+scikit-learn
+Deep Learning
+Python /Django
+Numpy/Scipy/Pandas/Scikit-learn
+Python/Django/Flask
+Numpy/Scipy/Pandas/Matplotlib/Scikit-learn
+Machine Learning Data Science Python
+TensorFlow
+NLP
+Deep Learning with TensorFlow
+PyTorch
+SpaCy
+Natural Language Toolkit (NLTK)
+spaCy, NLP, Keras, Tensorflow, Sckit-Learn,numpy,pandas
+Spicy
