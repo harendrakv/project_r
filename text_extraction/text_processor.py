@@ -84,10 +84,10 @@ class DocumentProcessor:
         
         if self.identifier==STRINGS.RESUME:
             save_file_name = os.path.join(pathlib.Path(self.filepath).parent.parent, FilesUtility.resumes_save_path, file_name)
-            FilesUtility.resume_save_path = save_file_name
+            FilesUtility.resume_save_path = pathlib.Path(save_file_name).parent
         else:
             save_file_name = os.path.join(pathlib.Path(self.filepath).parent.parent, FilesUtility.jd_save_path, file_name)
-            FilesUtility.jd_save_path = save_file_name
+            FilesUtility.jd_save_path = pathlib.Path(save_file_name).parent
         
         if not os.path.isdir(pathlib.Path(save_file_name).parent):
             if not os.path.isdir(pathlib.Path(save_file_name).parent.parent):

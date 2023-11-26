@@ -12,16 +12,23 @@ import pandas as pd
 import STRINGS
 
 class TextSimilarityScore:
-    def __init__(self):
+    def __init__(self, base_path=None):
+        if base_path:
+            resumes_path = os.path.join(base_path, FilesUtility.resumes_save_path)
+            jds_path = os.path.join(base_path, FilesUtility.jd_save_path)
+        else:
+            resumes_path = FilesUtility.resumes_save_path
+            jds_path = FilesUtility.jd_save_path
+
         resumes = []
-        for file in os.listdir(FilesUtility.resumes_save_path):
-            r1 = json.load(open(os.path.join(FilesUtility.resumes_save_path, file)))
+        for file in os.listdir(resumes_path):
+            r1 = json.load(open(os.path.join(resumes_path, file)))
             resumes.append(r1)
         self.resumes =resumes     
 
         jds = []
-        for file in os.listdir(FilesUtility.jd_save_path):
-            jd1 = json.load(open(os.path.join(FilesUtility.jd_save_path, file)))
+        for file in os.listdir(jds_path):
+            jd1 = json.load(open(os.path.join(jds_path, file)))
             jds.append(jd1)
         self.jds =jds 
     

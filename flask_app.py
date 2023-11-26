@@ -18,16 +18,18 @@ def handle_rf_post():
             'jd_file_path' in data):
             process_resumes(data['resume_file_path'])
             process_job_descriptions(data['jd_file_path'])
-            
             processed_jdsfiles = os.listdir(FilesUtility.jd_save_path)
-            
+            base_path = Path(data['jd_file_path']).parent
             for i in range(len(processed_jdsfiles)):
                 print("Creating match for job description {} of {}".format(i+1, len(processed_jdsfiles)))
-                sim_df = TextSimilarityScore().get_resumes_similarity_given_jd(processed_jdsfiles[i])
-                fields_df = TextSimilarityScore().get_keywords_similarity_given_jd(processed_jdsfiles[i])
+                sim_df = TextSimilarityScore(base_path).get_resumes_similarity_given_jd(processed_jdsfiles[i])
+                fields_df = TextSimilarityScore(base_path).get_keywords_similarity_given_jd(processed_jdsfiles[i])
                 final_df = pd.merge(sim_df, fields_df, how="inner", on=["resumes"])
-                outpath = Path(data['resume_file_path']).parent
-                final_df.to_csv(outpath+"/output/processed_resumes_for_jd_{}".format(processed_jdsfiles[i])+".csv")
+                outpath = os.path.join(base_path, 'output')
+                if not os.path.isdir(outpath):
+                    os.mkdir(outpath)
+                    
+                final_df.to_csv(os.path.join(outpath,"processed_resumes_for_jd_{}".format(processed_jdsfiles[i])+".csv"))
             
             response = make_response(STRINGS.SUCCESS_RESPONSE)
             response.status_code = 200
