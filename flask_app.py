@@ -3,6 +3,7 @@ from text_extraction import process_resumes, process_job_descriptions
 import STRINGS
 from utils import FilesUtility, check_if_file
 from similarity_scores import TextSimilarityScore
+from resumeKeywordsMatcher import process_resumes_for_keywords_matching, list_domains, sort_resumes
 import pandas as pd
 from pathlib import Path
 from flask import Flask, jsonify, request, make_response
@@ -31,6 +32,15 @@ def handle_rf_post():
                     
                 final_df.to_csv(os.path.join(outpath,"processed_resumes_for_jd_{}".format(processed_jdsfiles[i])+".csv"))
             
+            keyword_file = "Keywords.txt"
+            process_resumes_for_keywords_matching(keyword_file, outpath=outpath)
+            entities = list_domains(keyword_file)
+            for entity in entities:
+                try:
+                    sort_resumes(entity, outpath=outpath)
+                except:
+                    pass
+                
             response = make_response(STRINGS.SUCCESS_RESPONSE)
             response.status_code = 200
             return response
@@ -44,8 +54,6 @@ def handle_rf_post():
         response = make_response("<h1>Wrong Request</h1>")
         response.status_code = 400
         return response
-
-
 
 # driver function
 if __name__ == '__main__':

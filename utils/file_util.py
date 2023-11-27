@@ -16,7 +16,7 @@ class FilesUtility():
     resumes_path: str = "data/resumes"
     jd_save_path: str = "processed/jd"
     resumes_save_path: str = "processed/resumes"
-
+    processed_save_path: str = "data/processed"
 
     def __init__(self) -> None:
         pass
