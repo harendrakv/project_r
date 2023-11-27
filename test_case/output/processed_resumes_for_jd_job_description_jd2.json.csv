@@ -1,0 +1,4 @@
+,resumes,score,job_title_matched,job_title_score,technical_skills_matched,technical_skills_score,industry_domain_matched,industry_domain_score,location_matched,location_score
+0,CV,0.8937325600588086,"['Finance', 'MachineLearning', 'Mechanicalengineer']",75.0,"['automation', 'nlp', 'python']",21.428571428571427,"['Finance', 'MachineLearning', 'Mechanicalengineer']",75.0,['bangalore'],50.0
+1,ResumeBhagwantiVerma,0.7217005586442787,"['MachineLearning', 'Mechanicalengineer']",50.0,"['sql', 'algorithms', 'python']",21.428571428571427,"['MachineLearning', 'Mechanicalengineer']",50.0,[],0.0
+2,ResumeDHEERAJSHARMA,0.7408954266888994,['MachineLearning'],25.0,"['sql', 'data science', 'python', 'numpy']",28.57142857142857,['MachineLearning'],25.0,['bangalore'],50.0

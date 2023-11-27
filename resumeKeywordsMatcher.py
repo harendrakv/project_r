@@ -15,6 +15,9 @@ import STRINGS
 import json
 from utils import FilesUtility
 import re
+import matplotlib
+matplotlib.use('Agg')
+
 
 nlp=spacy.load(STRINGS.NLP_MODEL)
 

@@ -1,0 +1,35 @@
+Company website: https://www.marelli.com/
+
+Location: Bangalore
+
+Experience: 2-10YRS. 
+
+Tasks:
+
+ 
+
+Agile cooperation aimed to keep an up to date and dynamic set of project goals.
+Designing machine learning systems and self-running artificial intelligence (AI) software to automate predictive models
+Transforming data science prototypes and applying appropriate ML algorithms and tools. Ensuring that algorithms generate accurate user recommendations
+Performing tests on the bench on the real target
+Ensuring compliance with the defined coding standards (e.g. MISRA) and design rules
+Documenting the consistency between software and requirements
+Performing root cause analysis for issues and implementing needed changes
+ 
+
+Skills:
+
+ 
+
+-         University degree (master/diploma) in electrical engineering, computer science, physics or a comparable course
+
+Setup of the development environment (training, testing, embedded code generation)
+Verification and optimization of existing gesture recognition algorithm (python) with training data using Machine learning (SVM/ NN)
+Porting or code generation to execute the algorithm on target HW (Cortex M0/4/7)
+Performance verification and optimization on target HW
+Experience in ANSI-C, Python & Matlab
+Experience in real time operating systems for embedded applications
+Experience in Integrated Development Environments (e.g: Visual Studio) and build environments
+Experience in using Git configuration management system
+Experience in debugging tools (emulators)
+Experience in microcontrollers architecture and configuration
