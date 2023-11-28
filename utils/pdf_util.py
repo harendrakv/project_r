@@ -23,27 +23,29 @@ def convert_pdf_to_txt(path):
     password = ""
     maxpages = 0
     caching = True
-    pagenos=set()
+    pagenos = set()
 
-    for page in PDFPage.get_pages(fp, pagenos, maxpages=maxpages, password=password,caching=caching, check_extractable=True):
+    for page in PDFPage.get_pages(fp, pagenos, maxpages=maxpages, password=password, caching=caching, check_extractable=True):
         interpreter.process_page(page)
 
     text = retstr.getvalue()
-    
+
     fp.close()
     device.close()
     retstr.close()
     return text
 
+
 def extract_pdf_data(path):
     if check_if_file(Path(path)):
         text = convert_pdf_to_txt(path)
-        if len(text)<5:
+        if len(text) < 5:
             text = ocr_pdf_data(path)
     else:
         print("path does not contain file")
-        
+
     return text
+
 
 def ocr_pdf_data(path):
     actual_path = Path(path).parent
@@ -54,23 +56,27 @@ def ocr_pdf_data(path):
     name_ext_arr = str(file_name).split('.')
     filesUtil.user_file_name = name_ext_arr[0]
     filesUtil.user_file_ext = name_ext_arr[1]
-    filesUtil.image_dir = name_ext_arr[0] + '-images-' + (datetime.datetime.now()).strftime("%m%d%Y%H%M%S")
+    filesUtil.image_dir = name_ext_arr[0] + '-images-' + \
+        (datetime.datetime.now()).strftime("%m%d%Y%H%M%S")
     create_directory(path, filesUtil.image_dir)
     all_images = convert_pdf_get_png(actual_path, file_name)
-    text=""
+    text = ""
     for i, image in enumerate(all_images):
         if not filesUtil.is_break:
-            print("file name ::: " + str(name_ext_arr[0])+"     page ::: " + str(i + 1))
+            print("file name ::: " +
+                  str(name_ext_arr[0])+"     page ::: " + str(i + 1))
             image_path = f'{actual_path}\\{filesUtil.image_dir}\\{filesUtil.image_prefix}{i}{filesUtil.image_ext}'
             image.save(image_path)
             text = text + " " + process_image(image_path)
         else:
             break
-    delete_files_in_directory(f'{filesUtil.user_file_path}\\{filesUtil.image_dir}')
-    delete_directory(f'{filesUtil.user_file_path}\\{filesUtil.image_dir}', filesUtil.image_dir)
+    delete_files_in_directory(
+        f'{filesUtil.user_file_path}\\{filesUtil.image_dir}')
+    delete_directory(
+        f'{filesUtil.user_file_path}\\{filesUtil.image_dir}', filesUtil.image_dir)
 
-    
     return text
+
 
 def process_image(image_path):
     img = cv2.imread(image_path)
@@ -80,6 +86,8 @@ def process_image(image_path):
     img = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
     t = pytesseract.image_to_string(img, config='--psm 6 --oem 3')
     return t
+
+
 def convert_pdf_to_png(path, file):
     images = convert_from_path(f'{str(path)}/{file}', 500)
     for i, image in enumerate(images):

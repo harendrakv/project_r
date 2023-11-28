@@ -3,6 +3,7 @@ import pathlib
 from pathlib import Path
 import json
 
+
 class FilesUtility():
     user_file_path: str = "data"
     user_file_name: str = ""
@@ -51,12 +52,13 @@ def create_dirs():
 def get_folder_path():
     pass
 
+
 def load_jsonl(path):
-    data=[]
+    data = []
     with open(path, 'r', encoding='utf-8') as reader:
         for line in reader:
             data.append(json.loads(line))
-    return data 
+    return data
 
 
 def delete_images(images_len, path):
@@ -65,15 +67,15 @@ def delete_images(images_len, path):
 
 
 def delete_files_in_directory(directory_path):
-   try:
-     files = os.listdir(directory_path)
-     for file in files:
-       file_path = os.path.join(directory_path, file)
-       if os.path.isfile(file_path):
-         os.remove(file_path)
-     print("All files deleted successfully.")
-   except OSError:
-     print("Error occurred while deleting files.")
+    try:
+        files = os.listdir(directory_path)
+        for file in files:
+            file_path = os.path.join(directory_path, file)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+        print("All files deleted successfully.")
+    except OSError:
+        print("Error occurred while deleting files.")
 
 
 def delete_directory(path, directory):
@@ -87,4 +89,3 @@ def delete_directory(path, directory):
 
 def get_user_input():
     return input("Enter File Path : ")
-

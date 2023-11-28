@@ -17,22 +17,22 @@ RE_PATTERNS = {
 }
 
 jd_fields = [
-            "job_title",
-            "technical_skills",
-            "education",
-            "industry_domain",
-            "language_known",
-            "location",
-            ]
+    "job_title",
+    "technical_skills",
+    "education",
+    "industry_domain",
+    "language_known",
+    "location",
+]
 
 education_keywords = [
-            'Bachelor', 'BE','B.E.', 'B.E', 'BS', 'B.S','C.A.','c.a.','B.Com','B. Com','Bsc', 'B. Pharmacy', 'B Pharmacy', 
-            'M. Com', 'M.Com','M. Com .','Msc', 'M. Pharmacy','M. Pharma','M Pharma',
-            'ME', 'M.E', 'M.E.', 'MS', 'M.S',
-            'BTECH', 'B.TECH', 'M.TECH', 'MTECH','Master',
-            'PHD', 'phd', 'ph.d', 'Ph.D.','MBA','mba','graduate', 'post-graduate','5 year integrated masters','masters',
-            'SSC', 'HSC', 'CBSE', 'ICSE', 'X', 'XII'
-        ]
+    'Bachelor', 'BE', 'B.E.', 'B.E', 'BS', 'B.S', 'C.A.', 'c.a.', 'B.Com', 'B. Com', 'Bsc', 'B. Pharmacy', 'B Pharmacy',
+    'M. Com', 'M.Com', 'M. Com .', 'Msc', 'M. Pharmacy', 'M. Pharma', 'M Pharma',
+    'ME', 'M.E', 'M.E.', 'MS', 'M.S',
+    'BTECH', 'B.TECH', 'M.TECH', 'MTECH', 'Master',
+    'PHD', 'phd', 'ph.d', 'Ph.D.', 'MBA', 'mba', 'graduate', 'post-graduate', '5 year integrated masters', 'masters',
+    'SSC', 'HSC', 'CBSE', 'ICSE', 'X', 'XII'
+]
 
 FAILURE_RESPONSE = '''
 <html>

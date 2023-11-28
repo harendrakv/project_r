@@ -16,33 +16,37 @@ from spacy.tokens import DocBin
 import pandas as pd
 
 # In[]
+
+
 def prepare_ner_train_data(patterns):
     nlp1 = spacy.load("en_core_web_sm")
 
     nlp = spacy.blank("en")
     ruler = nlp.add_pipe("entity_ruler")
     ruler.add_patterns(patterns)
-    
-    files =  os.listdir(STRINGS.RESUME_FILES_PATH)
-    
+
+    files = os.listdir(STRINGS.RESUME_FILES_PATH)
+
     TRAIN_DATA = []
 
     for i in range(len(files)):
-        text = DocumentProcessor(files[i], STRINGS.RESUME).read_text_from_file()
-    
+        text = DocumentProcessor(
+            files[i], STRINGS.RESUME).read_text_from_file()
+
         corpus = []
         doc = nlp1(text)
         for sent in doc.sents:
             corpus.append(sent.text)
-    
+
         for sentence in corpus:
             doc = nlp(sentence)
             entities = []
-        
+
             for ent in doc.ents:
                 entities.append([ent.start_char, ent.end_char, ent.label_])
             TRAIN_DATA.append([sentence, {"entities": entities}])
     return TRAIN_DATA
+
 
 def convert(lang: str, TRAIN_DATA, output_path: Path):
     nlp = spacy.blank(lang)
@@ -61,11 +65,12 @@ def convert(lang: str, TRAIN_DATA, output_path: Path):
         db.add(doc)
     db.to_disk(output_path)
 
-def read_domain_file(keyword_file):   
-    file = open(keyword_file,newline='')
+
+def read_domain_file(keyword_file):
+    file = open(keyword_file, newline='')
     result = file.read()
     result1 = result.split('\n')
-    
+
     keys = []
     short_keys = []
     keywords = []
@@ -73,33 +78,36 @@ def read_domain_file(keyword_file):
     for i in range(len(result1)):
         keywords.append(result1[i].split(': ')[1].split(','))
         key = result1[i].split(': ')[0]
-        lis = re.split(r'[()]',key)
+        lis = re.split(r'[()]', key)
         keys.append(lis[0])
         try:
             short_keys.append(lis[1])
         except:
             short_keys.append(lis[0])
-            
+
     dictionary = dict(zip(keys, keywords))
-    keywords_df = pd.DataFrame({k:pd.Series(v) for k,v in dictionary.items()})
+    keywords_df = pd.DataFrame({k: pd.Series(v)
+                               for k, v in dictionary.items()})
     # keywords_df = read_domain_file(domain_keywords_file_path)
-    keywords_df.columns = keywords_df.columns.str.replace(' ', '') 
+    keywords_df.columns = keywords_df.columns.str.replace(' ', '')
     dictionary = keywords_df.to_dict()
     patterns = []
     for key in dictionary:
         skills = list(dictionary[key].values())
         skills = [x for x in skills if str(x) != 'nan']
         for i in range(len(skills)):
-            patterns.append({"label": key, "pattern": [{"lOWER": x.lower()} for x in skills[i].split(" ")]})
+            patterns.append({"label": key, "pattern": [
+                            {"lOWER": x.lower()} for x in skills[i].split(" ")]})
 
     with open('job_domains.jsonl', 'w') as f:
         for line in patterns:
             f.write(f"{line}\n")
-            
+
     return keywords_df
 
 # read_domain_file('data/DomainKeywords.txt')
-    
+
+
 # In[]
 patterns = load_jsonl(STRINGS.skill_pattern_path)
 patterns = patterns + load_jsonl(STRINGS.job_titles_pattern_path)
