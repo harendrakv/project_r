@@ -11,7 +11,6 @@ from utils import FilesUtility
 import pandas as pd
 import STRINGS
 
-
 class TextSimilarityScore:
     def __init__(self, base_path=None):
         if base_path:
@@ -97,7 +96,7 @@ class TextSimilarityScore:
     def get_keywords_similarity_given_jd(self, jd_path, tags=None):
         # other tags are job_title, location, education and industry_domain
         if tags == None:
-            tags = STRINGS.jd_fields
+            tags = STRINGS.JD_FIELDS
         jd = json.load(open(os.path.join(
             FilesUtility.user_file_path, FilesUtility.jd_save_path, jd_path)))
 

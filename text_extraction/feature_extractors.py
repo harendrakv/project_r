@@ -79,7 +79,7 @@ class FieldsExtractor:
 
     def extract_education(self):
         education = []
-        for keyword in STRINGS.education_keywords:
+        for keyword in STRINGS.EDUCATION_KEYWORDS:
             pattern = r"(?i)\b{}\b".format(re.escape(keyword))
             match = re.search(pattern, self.text)
             if match:

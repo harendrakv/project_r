@@ -6,11 +6,11 @@ Created on Thu Nov 23 14:03:14 2023
 """
 
 import os
+import pandas as pd
 from text_extraction import process_resumes, process_job_descriptions
 from resumeKeywordsMatcher import process_resumes_for_keywords_matching, list_domains, sort_resumes
 from utils import FilesUtility
 from similarity_scores import TextSimilarityScore
-import pandas as pd
 
 # In[]
 if __name__ == '__main__':
@@ -31,13 +31,13 @@ if __name__ == '__main__':
         os.mkdir(outpath)
 
     final_df.to_csv(os.path.join(
-        outpath, "processed_resumes_for_jd_{}".format(processed_jdsfiles[0])+".csv"))
+        outpath, f"processed_resumes_for_{processed_jdsfiles[0]+'.csv'}"))
 
-    keyword_file = "Keywords.txt"
-    process_resumes_for_keywords_matching(keyword_file, outpath=outpath)
-    entities = list_domains(keyword_file)
+    KEYWORD_FILE = "keywords.txt"
+    process_resumes_for_keywords_matching(KEYWORD_FILE, outpath=outpath)
+    entities = list_domains(KEYWORD_FILE)
     for entity in entities:
         try:
             sort_resumes(entity, outpath=outpath)
         except:
-            pass
+            print("Oops!  That was no valid entity.  Skipping...")

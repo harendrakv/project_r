@@ -1,0 +1,12 @@
+version: "3.2"
+services:
+    svc-ubuntu:
+        image: ubuntu:latest
+        restart: always
+        container_name: cont-UBN
+        networks:
+        - mgmt-nw
+        command: tail -f /dev/null
+networks:
+    mgmt-nw:
+        driver: bridge

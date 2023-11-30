@@ -1,0 +1,21 @@
+version: "3.2"
+services:
+    svc-project-r:
+        build:
+            context: ./project_r/
+            dockerfile: Dockerfile-project-r
+        image: svc-project-r
+        container_name: cont-project-r
+        restart: always
+        volumes:
+        - type: bind
+          source: D:/docker/project_r
+          target: /home/project_r
+        ports:
+        - "5000:5000"
+        networks:
+        - ML-nw
+        command: tail -f /dev/null
+networks:
+    ML-nw:
+        driver: bridge

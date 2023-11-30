@@ -12,3 +12,4 @@ spacy
 yake
 rake_nltk
 textacy
+pdfminer

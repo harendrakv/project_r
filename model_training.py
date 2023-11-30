@@ -109,10 +109,10 @@ def read_domain_file(keyword_file):
 
 
 # In[]
-patterns = load_jsonl(STRINGS.skill_pattern_path)
-patterns = patterns + load_jsonl(STRINGS.job_titles_pattern_path)
-patterns = patterns + load_jsonl(STRINGS.domain_keywords_file_path)
-patterns = patterns + load_jsonl(STRINGS.extra_skill_pattern_path)
+patterns = load_jsonl(STRINGS.SKILL_PATTERN_PATH)
+patterns = patterns + load_jsonl(STRINGS.JOB_TITLES_PATTERN_PATH)
+patterns = patterns + load_jsonl(STRINGS.DOMAIN_KEYWORDS_FILE_PATH)
+patterns = patterns + load_jsonl(STRINGS.EXTRA_SKILL_PATTERN_PATH)
 
 train_data = prepare_ner_train_data(patterns)
 

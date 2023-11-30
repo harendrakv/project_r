@@ -11,7 +11,6 @@ from flask import Flask, jsonify, request, make_response
 # creating a Flask app
 app = Flask(__name__)
 
-
 @app.route('/resume_filter', methods=['POST'])
 def handle_rf_post():
     if request.method == 'POST':

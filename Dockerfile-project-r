@@ -1,0 +1,13 @@
+FROM ubuntu:20.04
+RUN apt-get update
+#RUN apt upgrade
+RUN apt-get install -y python3.8
+RUN apt install -y python3-pip
+RUN mkdir -p /home/project_r
+COPY requirements.txt /home/project_r
+WORKDIR /home/project_r
+RUN pip3 install -r /home/project_r/requirements.txt
+
+
+#CMD echo "The application will start in 5s..." && \
+    #/home/project_r/flask_app.py

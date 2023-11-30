@@ -49,7 +49,6 @@ def spacy_phrase_matcher(keyword_file):
 
 # In[Function for creating database for resumes based on keywords]
 
-
 def create_database(phraseMatcher):
     extracted_resumes_path = os.path.join(
         FilesUtility.user_file_path, FilesUtility.resumes_save_path)
@@ -193,7 +192,7 @@ def sort_resumes(entity, n=5, outpath=None):
 
 
 if __name__ == '__main__':
-    keyword_file = "Keywords.txt"
+    keyword_file = "keywords.txt"
     process_resumes_for_keywords_matching(keyword_file)
     entities = list_domains(keyword_file)
     for entity in entities:

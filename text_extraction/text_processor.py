@@ -21,26 +21,25 @@ def process_resumes(input_path=None):
     if input_path == None:
         resume_files = os.listdir(FilesUtility().resumes_path)
         for i, file in enumerate(resume_files):
-            print("Processing resume {} of {}".format(i+1, len(resume_files)))
+            print(f"Processing resume {i+1} of {len(resume_files)}")
             doc_pr = DocumentProcessor(file, STRINGS.RESUME).process_text()
     else:
         resume_files = os.listdir(input_path)
         for i, file in enumerate(resume_files):
-            print("Processing resume {} of {}".format(i+1, len(resume_files)))
+            print(f"Processing resume {i+1} of {len(resume_files)}")
             doc_pr = DocumentProcessor(
                 file, STRINGS.RESUME, input_path).process_text()
-
 
 def process_job_descriptions(input_path=None):
     if input_path == None:
         jd_files = os.listdir(FilesUtility().jd_path)
         for i, file in enumerate(jd_files):
-            print("Processing job description {} of {}".format(i+1, len(jd_files)))
+            print(f"Processing job description {i+1} of {len(jd_files)}")
             doc_pr = DocumentProcessor(file, STRINGS.JD).process_text()
     else:
         jd_files = os.listdir(input_path)
         for i, file in enumerate(jd_files):
-            print("Processing job description {} of {}".format(i+1, len(jd_files)))
+            print(f"Processing job description {i+1} of {len(jd_files)}")
             doc_pr = DocumentProcessor(
                 file, STRINGS.JD, input_path).process_text()
 
