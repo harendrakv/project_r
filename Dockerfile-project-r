@@ -6,6 +6,9 @@ RUN apt install -y python3-pip
 RUN mkdir -p /home/project_r
 COPY requirements.txt /home/project_r
 WORKDIR /home/project_r
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+RUN apt-get install -y poppler-utils
+RUN apt install tesseract-ocr -y
 RUN pip3 install -r /home/project_r/requirements.txt
 
 
